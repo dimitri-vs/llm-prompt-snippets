@@ -4,7 +4,7 @@ A guide for maximizing productivity with Cursor IDE and LLM-assisted development
 
 ## Project Setup
 
-Use the `.cursorrules` file as a global project directives that contain guidelines relevant to >90% of your Chat/Composer requests. See my [Cursor .cursorrules Template](cursor_cursorrules_template.md).
+Use the `.cursorrules` file as global project directives that contain guidelines applicable to >90% of your Chat/Composer requests. See my [Cursor .cursorrules Template](cursor_cursorrules_template.md).
 
 Use a `DEVELOPMENT.md` file to track high-level project progress and high-level business logic/decisions. See my [Cursor DEVELOPMENT.md](cursor_development_md_template.md) template.
 
@@ -14,7 +14,7 @@ Use a `temp/` folder as an additional context dump (meeting transcripts, specs/r
 
 ## Cursor Chat Best Practices
 
-Check your Cursor Settings, specifically the "Model" setting. Models get updated frequently and you should try out the latest and most powerful coding model for a day or two to see if it's better for you. See https://livebench.ai/ and sort by "Coding Average" to find whats currently ranked best.
+Check your Cursor Settings, specifically the "Model" setting. Models are updated frequently, so try out the latest and most powerful coding model for a few days to evaluate if it improves your workflow. See https://livebench.ai/ and sort by "Coding Average" to find the current top-ranked models.
 
 You can paste in a URL to an API docs page which will create an `@mention` that will pull in the API docs as a reference.
 
@@ -27,7 +27,7 @@ Generate a two-paragraph summary of our session:
 Keep it concise. Brevity is preferable over proper grammar.
 ```
 
-As of 2024-12 I use `claude-3-5-sonnet-latest` (aka. `claude-3-5-sonnet-20241022`) for 80% of my chat, switching to `o1` when doing larger refactors or when `sonnet-latest` fails to resolve a bug after 2 attempts.
+As of 2025-01 I use `claude-3-5-sonnet-latest` (aka. `claude-3-5-sonnet-20241022`) for 80% of my chat, switching to `o1` (points to `o1-preview`) when doing larger refactors or when `sonnet-latest` fails to resolve a bug after 2 attempts.
 
 You should always review and edit the green diffs before applying, Cursor is very eager to remove your comments and delete functionality it deems "unnecessary" to the current task.
 
@@ -35,14 +35,16 @@ You can even get extra meta and use Ctrl+K to apply changes to green lines befor
 
 ## When To Use Agentic Mode
 
-The original Composer mode isn't anywhere reliable enough, but the Agentic mode is really great for when you need to do something that requires a lot of small changes across a lot of files or as a starting point for a refactoring when you don't really know what upstream/downstream changes are required.
+While the original Composer mode lacks reliability, Agentic mode excels at tasks requiring multiple small changes across files or when initiating refactoring without full knowledge of required upstream/downstream changes.
+
+⚠️ You should already be doiing this, but if you are going to use Agentic mode, make sure that you keep your code file under 500 lines. As of 2025-01, this is the maximum range that Cursor Agent can read in two attempts.
 
 ## Debugging Workflow
 
-1. Use sonnet, share relavant error message(s), if new thread explain what I was doing when I got the error message
-2. Use sonnet again in same thread, most of the time it will figure it out on the second try
-3. Switch to o1-preview on last message and resubmit, kind of like getting a second opinion
-4. Switch back to sonnet ask it to add logging messages to help narrow down the source of the issue
+1. Start with sonnet and share relevant error message(s). For new threads, explain the context of when the error occurred
+2. If the error persists, switch to o1-preview and resubmit your last message (like getting a second opinion)
+3. Return to sonnet and request additional logging messages to help identify the error source
+4. Create a new chat thread focused specifically on the error message
 
 ## Cursor for Writing & Prompt Engineering
 
