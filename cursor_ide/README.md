@@ -35,7 +35,9 @@ You can even get extra meta and use Ctrl+K to apply changes to green lines befor
 
 ## When To Use Agentic Mode
 
-The original Composer mode isn't anywhere reliable enough, but the Agentic mode is really great for when you need to do something that requires a lot of small changes across a lot of files or as a starting point for a refactoring when you don't really know what upstream/downstream changes are required.
+While the original Composer mode lacks reliability, Agentic mode excels at tasks requiring multiple small changes across files or when initiating refactoring without full knowledge of required upstream/downstream changes.
+
+⚠️ You should already be doiing this, but if you are going to use Agentic mode, make sure that you keep your code file under 500 lines. As of 2025-01, this is the maximum range that Cursor Agent can read in two attempts.
 
 ## Debugging Workflow
 
