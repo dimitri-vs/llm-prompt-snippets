@@ -1,16 +1,24 @@
 <!-- Original FlashPaste name: Cursor: .cursorrules Template -->
 <!-- FlashPaste ID: 193 -->
 
-This project is [core purpose] built using [key technologies], designed to solve [specific business problem].
+This project is an [business or industry]'s [project type] intended to [goal / problem to solve] for the [intended user].
 
-The architecture emphasizes [main architectural choices] to achieve [key requirements], though we had to make trade-offs regarding [important decisions, high level business logic].
+**Tech Stack**
 
-Be aware of [critical dependencies/integrations] and [known technical debt].
+- Frontend: 
+- Backend: 
+- UI Components:
+  - ...
+- Hosting: 
+- Database: 
+- Authentication: 
+- Core Third Party APIs:
+  - ...
 
-When responding with code edits, include any comments that are nearby the edited code and update them if needed.
-If the user has a "TODO:" or "NOTE:" or "IMPORTANT:" comment nearby, **always** include it in your code edit response.
-Example: if user's code has `#NOTE: Business logic\n\n\ndef calc():...`, include it as `// ... #NOTE: Business logic {{ updated_code }} // ...`
+**Cursor Guidelines**
 
-When asked to do a database migration, write a migration function that can be run in the `main` block unless otherwise specified, including highly visible warnings about irreversible operations and concise safety recommendations for testing and rollback.
+It's very important to preserve and include any nearby comments in the code edits in your responses, updating them as needed.
+If the reference code contains or is near "TODO:", "NOTE:", or "IMPORTANT:" comments, always include them in your response code.
+Example: Given code with `#NOTE: Business logic\n\n\ndef calc():...`, respond with updated code as `// ... #NOTE: Business logic {{ updated_code }} // ...`
 
-Given that tests create a maintenance burden, when I ask you to write tests err on the side of keeping them small, simple and minimal unless I specify otherwise.
+To minimize maintenance burden, when writing tests keep them small, simple and minimal unless specifically requested otherwise.
