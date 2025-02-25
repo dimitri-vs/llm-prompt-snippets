@@ -1,7 +1,7 @@
 <!-- Original FlashPaste name: Cursor: Update ISSUE_SPEC.md -->
 <!-- FlashPaste ID: 197 -->
 
-Append the @ISSUE_SPEC.md🔴 file, under **Cursor Implementation Notes**, with two-paragraph summary of our session. If a session exists that is very similar to what we're trying to do and our current sessions scope of changes is minimal, then update the existing session.
+Append the @ISSUE_SPEC🔴 file, under **Cursor Implementation Notes**, with two-paragraph summary of our session. If a session exists that is very similar to what we're trying to do and our current sessions scope of changes is minimal, then update the existing session.
 
 1. Add a bold session title that clearly identifies the feature/fix (e.g., "**Manual Content Input Implementation**" or "**Validation Logic Fix**")
 
